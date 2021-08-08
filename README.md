@@ -1,6 +1,6 @@
 # Predicting NBA win probability using machine learning methods
 
-## Summary
+## Abstract
 
 The aim of this project is to harness historical NBA data in order to gain insights into what statistical factors make a team successful in a given season. The team of focus for this project is the Golden State Warriors, and the box score data for each game within the span of the most recent NBA season is accessed via the Sports Reference API. The concepts and algorithms used range from Bayesian probability to more advanced ML models such as logistic regression and decision trees. With sports fanatics, NBA analysts, and players / coaches in mind, the final deliverable will be a data-driven report with an emphasis on strategic actionability. That is, the results of the model should ideally shed light on how to maximize wins for the GSW in the future.
 
@@ -53,6 +53,10 @@ All of the features listed above are being used to train the model, with the exc
 | Logistic Regression | 98.88% | 97.39% |
 | Decision Tree | 100% | 98.26% |
 | Support Vector Machines | 99.13% | 96.52% |
+
+After analyzing the accuracy of each model based on the training and testing data, I have come to the conclusion that the best model, among the 3 listed above, is logistic regression. The reason I did not choose the decision tree is because of overfitting, which is explained below, but between logistic regression and SVM, the former was slightly preferable to the latter, because although SVM edged out LR by 0.25% on the training data, LR edged out SVM by 0.87% on the testing data. Also, a logistic regression model is generally better suited for structured data and already identified variables than SVM, which can be useful for unstructured or semi-structured data.
+
+Overfitting is clearly occurring with the Decision Tree Model on the training data, as it got 100% accuracy. This means that the model fits exactly against this training data, which is a drawback because it indicates that it is too specific to this data and if given new data, it will be unable to generalize well to it. Upon further research, I have found that decision trees often overfit the data and cannot adjust to new datasets as well as other models. 
 
 
 
