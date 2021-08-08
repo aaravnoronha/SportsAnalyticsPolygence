@@ -21,3 +21,22 @@ I am interested in this domain because I am an NBA fan (specifically, a Warriors
 
 I found that a team’s offensive rating is very highly correlated to its true shooting percentage as well as its effective field goal percentage, and that those 2 were also highly correlated, which was expected. Additionally, I found that turnover percentage was highly correlated with steals, which was also expected. The total rebound percentage was also highly correlated with both the offensive and defensive rebound percentage, and they were also correlated. The usage percentage data was not as useful because it takes into account many other different variables. Using the heatmap, the highest correlation occurred between the TS% and EFG%, followed by TRB%, ORB% and DRB%, as stated above. The lowest correlation was between STL% and TOV%.
 
+## Features
+
+- `MP`: Minutes Played
+- `TS%`: True Shooting Percentage - 2pts, 3pts, FT combined
+- `eFG%`: Effective Field Goal Percentage - Values 3pt shot more than 2
+- `3PAr`: 3-point Attempt Rate - Percentage of FG from 3
+- `ORB%`: Offensive Rebound Percentage - estimated % of available off rbd a player grabbed
+- `DRB%`: Defensive Rebound Percentage - estimated % of available def rbd a player grabbed
+- `TRB%`: Total Rebound Percentage - estimated % of available rbd a player grabbed
+- `AST%`: Assist Percentage - estimated % of FG a player assisted
+- `STL%`: Steal Percentage - estimated % of opp poss ending with steal by player
+- `BLK%`: Block Percentage - estimated % of opp 2pt FG blocked by player
+- `TOV%`: Turnover Percentage - estimated % of turnovers committed per 100 plays
+- `USG%`: Usage Percentage - estimated % of team plays used by player
+    *NOTE: This feature is not useful for team data, only individual players stats
+- `ORtg`: Offensive Rating - estimate of pts produced (player) or scored (teams) per 100 poss
+- `DRtg`: Defensive Rating - estimate of pts allowed per 100 poss
+- `BPM`: Box Plus/Minus - box score estimate of pts per 100 poss a player contributed above an avg player, translated to an avg team
+
