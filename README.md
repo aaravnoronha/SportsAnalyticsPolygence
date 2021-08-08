@@ -25,18 +25,23 @@ I found that a team’s offensive rating is very highly correlated to its true s
 
 - `MP`: Minutes Played
 - `TS%`: True Shooting Percentage - 2pts, 3pts, FT combined
-- `eFG%`: Effective Field Goal Percentage - Values 3pt shot more than 2
+**- `eFG%`: Effective Field Goal Percentage - Values 3pt shot more than 2**
 - `3PAr`: 3-point Attempt Rate - Percentage of FG from 3
 - `ORB%`: Offensive Rebound Percentage - estimated % of available off rbd a player grabbed
 - `DRB%`: Defensive Rebound Percentage - estimated % of available def rbd a player grabbed
-- `TRB%`: Total Rebound Percentage - estimated % of available rbd a player grabbed
+**- `TRB%`: Total Rebound Percentage - estimated % of available rbd a player grabbed**
 - `AST%`: Assist Percentage - estimated % of FG a player assisted
 - `STL%`: Steal Percentage - estimated % of opp poss ending with steal by player
 - `BLK%`: Block Percentage - estimated % of opp 2pt FG blocked by player
 - `TOV%`: Turnover Percentage - estimated % of turnovers committed per 100 plays
-- `USG%`: Usage Percentage - estimated % of team plays used by player
-    *NOTE: This feature is not useful for team data, only individual players stats
-- `ORtg`: Offensive Rating - estimate of pts produced (player) or scored (teams) per 100 poss
+- `USG%`: Usage Percentage - estimated % of team plays used by player (*NOTE: not useful for team data, only individual players stats*)
+**- `ORtg`: Offensive Rating - estimate of pts produced (player) or scored (teams) per 100 poss**
 - `DRtg`: Defensive Rating - estimate of pts allowed per 100 poss
 - `BPM`: Box Plus/Minus - box score estimate of pts per 100 poss a player contributed above an avg player, translated to an avg team
+
+I hypothesize the bolded features would have the largest impact on game outcomes because:
+- Effective Field Goal Percentage accounts for the additional value of a 3 point shot over a 2, so it can more accurately describe how well a team can score
+- Total Rebound Percentage takes into account two other features (ORB% and DRB%), which will give more comprehensive data for the rebounding category
+- Offensive Rating, similar to eFG, does not measure who scores the most points, but instead measures how efficiently those points are scored. In other words, I hypothesize that PPG for a specific team will not correlate exactly to their ORtg (same logic goes for defensive rating, however, it does not have as large of an impact as its offensive counterpart)
+
 
