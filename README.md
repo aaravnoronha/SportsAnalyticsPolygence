@@ -15,9 +15,9 @@ I am interested in this domain because I am an NBA fan (specifically, a Warriors
 
 ## Exploratory Data Analysis
 
-<img src="efg_histplot.png" width="300"/> <img src="tov_histplot.png" width="300"/> <img src="trb_histplot.png" width="300"/> 
+<p align="center"><img src="efg_histplot.png" width="300"/> <img src="tov_histplot.png" width="300"/> <img src="trb_histplot.png" width="300"/></p>
 
-<img src="corr_matrx.png" width="450"/> <img src="pairplot.png" width="450"/> 
+<p align="center"><img src="corr_matrx.png" width="450"/> <img src="pairplot.png" width="450"/></p>
 
 I found that a team’s offensive rating is very highly correlated to its true shooting percentage as well as its effective field goal percentage, and that those 2 were also highly correlated, which was expected. Additionally, I found that turnover percentage was highly correlated with steals, which was also expected. The total rebound percentage was also highly correlated with both the offensive and defensive rebound percentage, and they were also correlated. The usage percentage data was not as useful because it takes into account many other different variables. Using the heatmap, the highest correlation occurred between the TS% and EFG%, followed by TRB%, ORB% and DRB%, as stated above. The lowest correlation was between STL% and TOV%.
 
@@ -57,6 +57,20 @@ All of the features listed above are being used to train the model, with the exc
 After analyzing the accuracy of each model based on the training and testing data, I have come to the conclusion that the best model, among the 3 listed above, is logistic regression. The reason I did not choose the decision tree is because of overfitting, which is explained below, but between logistic regression and SVM, the former was slightly preferable to the latter, because although SVM edged out LR by 0.25% on the training data, LR edged out SVM by 0.87% on the testing data. Also, a logistic regression model is generally better suited for structured data and already identified variables than SVM, which can be useful for unstructured or semi-structured data.
 
 Overfitting is clearly occurring with the Decision Tree Model on the training data, as it got 100% accuracy. This means that the model fits exactly against this training data, which is a drawback because it indicates that it is too specific to this data and if given new data, it will be unable to generalize well to it. Upon further research, I have found that decision trees often overfit the data and cannot adjust to new datasets as well as other models. 
+
+<p align="center"><img src="conf_mat.png" width="450"/></p>
+
+This confusion matrix represents a visualization of the performance of the model on the data inputted. A total of 115 games are represented in this matrix, of which 112 were predicted correctly, the other 3 being predicted wins that ended up being losses. It is better to err on the side of false negatives for this project, since those are games that were predicted to be losses, but ended up being wins.
+
+## Discussion
+
+### How is this project actionable?
+
+Since the accuracy of the model is so high, the average box score totals can be used in order to predict a game outcome. For example, take GSW’s box score totals, average them out, then compare them to another team, take the difference between them, input that into the trained model, and it will give an output of W or L. To get even better results, input only recent data (e.g last 10 games), because there will be more continuity with lineups, performance, etc.
+
+### What would you do to extend this project if given more time / data?
+
+My next step would be to increase the complexity of the model by feeding in more data (potentially individual player stats) and attempt to get even higher accuracy. The accuracy is already very high (close to 100%) on both the training and testing data, so this would not improve it by a significant amount, but the goal is to get as close as possible. I would also test on more ML models, although I am confident that the 3 I have will give some of the highest accuracy. Additionally, we could take data from the last 10 or 15 years, try various training and testing splits with these models, and analyze to see which one is ideal in terms of practicality. There are many ways this project could be extended - it is versatile and adaptable, but also complex and thorough. 
 
 
 
