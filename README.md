@@ -15,7 +15,9 @@ I am interested in this domain because I am an NBA fan (specifically, a Warriors
 
 ## Exploratory Data Analysis
 
-![correlation matrix](corr_matrx.png)
+<img src="efg_histplot.png" width="300"/> <img src="tov_histplot.png" width="300"/> <img src="trb_histplot.png" width="300"/> 
+
+<img src="corr_matrx.png" width="450"/> <img src="pairplot.png" width="450"/> 
 
 I found that a team’s offensive rating is very highly correlated to its true shooting percentage as well as its effective field goal percentage, and that those 2 were also highly correlated, which was expected. Additionally, I found that turnover percentage was highly correlated with steals, which was also expected. The total rebound percentage was also highly correlated with both the offensive and defensive rebound percentage, and they were also correlated. The usage percentage data was not as useful because it takes into account many other different variables. Using the heatmap, the highest correlation occurred between the TS% and EFG%, followed by TRB%, ORB% and DRB%, as stated above. The lowest correlation was between STL% and TOV%.
 
